@@ -16,11 +16,15 @@ const App = () => {
             key={tab}
             role="tab"
             onClick={() => setActiveTab(tab)}
-            className={`tab ${activeTab === tab ? 'tab-active bg-black text-white' : ''}`}
+            className={`tab ${activeTab === tab ? 'tab-active bg-black text-white font-semibold' : ''}`}
           >
             {tab}
           </a>
         ))}
+      </div>
+      {/* Box */}
+      <div className="border-l border-r border-b border-black rounded-bl-xl rounded-br-xl w-[415px] h-auto">
+        Hello
       </div>
     </div>
   );

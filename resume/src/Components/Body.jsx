@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 const Body = () => {
   return (
@@ -11,9 +11,8 @@ const Body = () => {
           It only takes a few minutes to create a professional resume!
         </p>
       </div>
-      {/* Box */}
-     </div>
-  )
-}
+    </div>
+  );
+};
 
-export default Body
+export default Body;
