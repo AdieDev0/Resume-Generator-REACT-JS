@@ -1,5 +1,10 @@
 import React, { useState } from "react";
 import Body from "./Components/Body";
+import Personal from "./Components/Personal";
+import Experience from "./Components/Experience";
+import Education from "./Components/Education";
+import Skills from "./Components/Skills";
+import Project from "./Components/Project";
 
 const App = () => {
   const [activeTab, setActiveTab] = useState('Personal');
@@ -22,9 +27,14 @@ const App = () => {
           </a>
         ))}
       </div>
-      {/* Box */}
-      <div className="border-l border-r border-b border-black rounded-bl-xl rounded-br-xl w-[415px] h-auto">
-        Hello
+
+      {/* Box for displaying active tab content */}
+      <div className="border-l border-r border-b border-black rounded-bl-xl rounded-br-xl w-[415px] h-auto p-5">
+        {activeTab === 'Personal' && <Personal />}
+        {activeTab === 'Experience' && <Experience />}
+        {activeTab === 'Education' && <Education />}
+        {activeTab === 'Skills' && <Skills />}
+        {activeTab === 'Project' && <Project />}
       </div>
     </div>
   );
