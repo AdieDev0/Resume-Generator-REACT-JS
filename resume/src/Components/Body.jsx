@@ -7,7 +7,7 @@ const Body = () => {
         <p className="text-6xl font-Ubuntu font-bold bg-gradient-to-t from-[#343434] from-45% bg-clip-text text-transparent">
           Resume Generator
         </p>
-        <p className="text-xl font-medium text-black/70">
+        <p className="text-xl font-medium text-black/90">
           It only takes a few minutes to create a professional resume!
         </p>
       </div>
