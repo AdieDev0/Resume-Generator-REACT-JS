@@ -1,6 +1,15 @@
 import React from 'react';
 
-const Personal = () => {
+const Personal = ({ data, onChange }) => {
+  // Function to handle input changes
+  const handleInputChange = (e) => {
+    const { id, value } = e.target;
+    onChange({
+      ...data,
+      [id]: value, // Update the corresponding field in the state
+    });
+  };
+
   return (
     <div>
       <p className="text-3xl font-semibold text-black mb-6">Personal Information</p>
@@ -13,12 +22,14 @@ const Personal = () => {
           <input
             type="text"
             id="name"
+            value={data.name}  // Controlled input
+            onChange={handleInputChange}
             placeholder="Enter Name"
             className="bg-white text-black p-3 border border-gray-400 rounded-lg shadow-sm focus:outline-none focus:ring-1 focus:ring-gray-600 focus:border-gray-900 transition duration-300"
             required
           />
         </div>
-        
+
         {/* Email */}
         <div className="grid gap-2">
           <label className="text-lg font-medium text-black" htmlFor="email">
@@ -27,12 +38,14 @@ const Personal = () => {
           <input
             type="email"
             id="email"
+            value={data.email}  // Controlled input
+            onChange={handleInputChange}
             placeholder="Enter Email"
             className="bg-white text-black p-3 border border-gray-400 rounded-lg shadow-sm focus:outline-none focus:ring-1 focus:ring-gray-600 focus:border-gray-900 transition duration-300"
             required
           />
         </div>
-        
+
         {/* Phone */}
         <div className="grid gap-2">
           <label className="text-lg font-medium text-black" htmlFor="phone">
@@ -41,12 +54,14 @@ const Personal = () => {
           <input
             type="tel"
             id="phone"
+            value={data.phone}  // Controlled input
+            onChange={handleInputChange}
             placeholder="Enter Phone Number"
             className="bg-white text-black p-3 border border-gray-400 rounded-lg shadow-sm focus:outline-none focus:ring-1 focus:ring-gray-600 focus:border-gray-900 transition duration-300"
             required
           />
         </div>
-        
+
         {/* Location */}
         <div className="grid gap-2">
           <label className="text-lg font-medium text-black" htmlFor="location">
@@ -55,12 +70,14 @@ const Personal = () => {
           <input
             type="text"
             id="location"
+            value={data.location}  // Controlled input
+            onChange={handleInputChange}
             placeholder="Enter Location"
             className="bg-white text-black p-3 border border-gray-400 rounded-lg shadow-sm focus:outline-none focus:ring-1 focus:ring-gray-600 focus:border-gray-900 transition duration-300"
             required
           />
         </div>
-        
+
         {/* Summary */}
         <div className="grid gap-2">
           <label className="text-lg font-medium text-black" htmlFor="summary">
@@ -68,6 +85,8 @@ const Personal = () => {
           </label>
           <textarea
             id="summary"
+            value={data.summary}  // Controlled input
+            onChange={handleInputChange}
             placeholder="Enter Summary"
             className="bg-white text-black p-3 border border-gray-400 rounded-lg shadow-sm focus:outline-none focus:ring-1 focus:ring-gray-600 focus:border-gray-900 h-28 resize-none transition duration-300"
             required

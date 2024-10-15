@@ -41,7 +41,7 @@ const Education = () => {
   };
 
   return (
-    <div className="bg-gray-50 rounded-lg shadow-lg p-6">
+    <div>
       <p className="text-3xl font-semibold text-gray-900 mb-6">Education</p>
       <form onSubmit={handleSubmit}>
         {educations.map((education, index) => (
